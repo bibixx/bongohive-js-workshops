@@ -20,7 +20,16 @@ const getUser = (id) => {
 }
 ```
 
-## Function as value
+## Function as an argument
+```js
+function sayHi() {
+  console.log("Hi!")
+}
+
+setTimeout(sayHi, 200)
+// After 200 ms it'll say "Hi!"
+```
+
 ```js
 // Text should be of format "I have #", where "#" will be replaced
 // with the number
@@ -126,10 +135,11 @@ const userAfterSecondCheck = checkPassword(userAfterFirstCheck, 'hello1')
 
 ### Function returning a function
 ```js
-// @TODO clojure
 function greet(name) {
+  const helloString = `Hello ${name}`
+
   function logName() {
-    console.log(`Hello ${name}!`)
+    console.log(helloString)
   }
 
   return logName
@@ -148,8 +158,7 @@ greetPeter()
 #### Currying
 ```js
 const filterByKey = (key) => (arraykey, Value) =>
-  array
-    .filter(element => element[key] === keyValue)
+  array.filter(element => element[key] === keyValue)
 
 const users = [
   { id: 1, firstName: 'John', surname: 'Adams' },
@@ -274,4 +283,63 @@ functionWithCustomThis(7, 8)
 // 7
 // 8
 // this is my custom this
+```
+
+---
+
+## Exercises
+1. Implement a function that allows you to pass a custom greeting. The greeting should change depending on an hour of the day
+```js
+const getGreeting = (hour) => {
+  if (hour < 12) {
+    return "Good Morning"
+  }
+
+  if (hour < 20) {
+    return "Good Afternoon"
+  }
+
+  return "Good Evening"
+}
+
+const greet = /* Your code goes here */
+
+greet("Adam", getGreeting, 10)
+// Good Morning Adam!
+
+greet("John", getGreeting, 15)
+// Good Afternoon Adam!
+
+greet("Mike", getGreeting, 23)
+// Good Evening Adam!
+```
+
+2. Create a function that adds a random number to the array in an immutable way.
+```js
+const addRandomNumberToArray = /* Your code goes here */
+
+const array0 = []
+const array1 = addRandomNumberToArray(array0)
+const array2 = addRandomNumberToArray(array1)
+const array3 = addRandomNumberToArray(array2)
+
+console.log(array0) // -> []
+console.log(array1) // -> [0.123]
+console.log(array2) // -> [0.123, 0.456]
+console.log(array3) // -> [0.123, 0.456, 0.789]
+```
+
+3. Implement a function that allows you to introduce the animal and make a sound
+```js
+const makeSound = /* Your code goes here */
+const makeDogSound = makeSound("Woof!")
+const makeCowSound = makeSound("Moo!")
+
+makeDogSound("Dot")
+// I'm Dot. Woof!
+makeDogSound("Stinky")
+// I'm Stinky. Woof!
+
+makeCowSound("Emma")
+// I'm Emma. Moo!
 ```
