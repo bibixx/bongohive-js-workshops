@@ -199,19 +199,17 @@ const user = {
   age: 23
 }
 
+const $firstNameContainer = document.createElement("div")
+$firstNameContainer.textContent = user.firstName
 
+const $lastNameContainer = document.createElement("div")
+$lastNameContainer.textContent = user.lastName
+
+const $ageContainer = document.createElement("div")
+$ageContainer.textContent = user.age
+
+const $wrapper = document.querySelector("#wrapper")
+$wrapper.appendChild($firstNameContainer)
+$wrapper.appendChild($lastNameContainer)
+$wrapper.appendChild($ageContainer)
 ```
-
-
-DOM
-  Moving through the DOM
-  Creating Selectors
-  adding elements
-  listeners
-  settings values (innerHTML, textContent, setAttribute, className)
-  preventDefault
-  stopPropagation
-  value
-  valueAsNumber
-  target
-  currentTarget
