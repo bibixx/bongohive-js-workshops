@@ -1,6 +1,6 @@
 # Store multiple values in one place
 
-You can declare array as usual by typing square bracets
+You can declare array as usual by typing square brackets
 
 ``` js
 let arr = []
@@ -72,7 +72,7 @@ let removed = productCodes.shift()
 ``` js
 const numbers = [1,2,3,4,5]
 numbers.reverse()
-// output: [ 5, 4, 3, 2, 1 ]
+// numbers: [ 5, 4, 3, 2, 1 ]
 ```
 
 ## Arrays and text
@@ -81,12 +81,6 @@ numbers.reverse()
 let userSentence = "Hi my name is Mike"
 let wordsInSentence = userSentence.split(' ')
 // wordsInSentence: [ 'Hi', 'my', 'name', 'is', 'Mike' ]
-```
-
-``` js
-const myName = "Piotr"
-const myNameLetters = [...myName]
-// myNameLetters: [ 'P', 'i', 'o', 't', 'r' ]
 ```
 
 ``` js
@@ -144,7 +138,7 @@ console.log(animals)
 //   'cat', 'cat', 'cat', 'cat'
 // ]
 
-let flowers = Array.from({ length: 20 }).map( () => "flower")
+let flowers = Array.from({ length: 20 }).map(() => "flower")
 // output: [
 //   'flower', 'flower', 'flower',
 //   'flower', 'flower', 'flower',
@@ -160,7 +154,7 @@ let flowers = Array.from({ length: 20 }).map( () => "flower")
 
 ``` js
 const enemies = ["enemy1", "enemy2"]
-for (const enemy of enemies) { 
+for (const enemy of enemies) {
     console.log(enemy)
 }
 // output: enemy1, enemy2
