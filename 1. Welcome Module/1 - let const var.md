@@ -4,13 +4,13 @@ The oldest way to declare variables is to use the keyword `var`
 
 ## issues with `var`
 
-### Overriding 
+### Overriding
 
 ``` js
 var temporaryCache = ['cache1', 'cache2'];
 var isOffline = true;
 
-if (isOffline) { 
+if (isOffline) {
     var temporaryCache = ['cache3'];
 }
 
@@ -40,7 +40,7 @@ let username = "Phineash";
 let users = ["user1", "user2"];
 let validationEnabled = true;
 
-if (validationEnabled) { 
+if (validationEnabled) {
     let users = ["users1"]
 }
 
@@ -58,7 +58,7 @@ age = 42;
 
 > We can tho modify the properties of the object declared with const
 >``` js
->const user = { 
+>const user = {
 >    name: "Bill",
 >    age: 28
 >}
@@ -66,4 +66,4 @@ age = 42;
 >user.age = 18
 >// user: { name: "Bill", age: 18 }
 >```
-> it works because const prevents us from changing the **value** and in case of the object the value is pointer aka reference to that object, when we changes object the reference doesn't change so everything is fine
+> it works because const prevents us from changing the **value** and in case of the object the value is a reference to that object, when we change the object the reference doesn't change so everything is fine
