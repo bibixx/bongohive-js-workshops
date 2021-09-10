@@ -1,9 +1,9 @@
 # Repeat stuff in easy way
 
-## C for like loop
+## C-like for loop
 
 ```js
-for (let i=0; i<10; i++) { 
+for (let i=0; i<10; i++) {
     console.log(i)
 }
 // 0 1 2 3 4 5 6 7 8 9
@@ -13,7 +13,7 @@ The condition might look different tho
 
 ```js
 let userAuthenticated = true
-for (let i=0; i<10 && userAuthenticated; i++) { 
+for (let i=0; i<10 && userAuthenticated; i++) {
     // upload data for authenticated user
 }
 ```
@@ -22,7 +22,7 @@ for (let i=0; i<10 && userAuthenticated; i++) {
 
 ```js
 let isReady = false
-while(!isReady) { 
+while(!isReady) {
     // check if ready
 }
 ```
@@ -42,7 +42,7 @@ do {
 ```js
 let badWord = "gtfo";
 let userMessageWords = ["hey", "gtfo", "right", "now"]
-for (let index = 0; index < userMessageWords.length; index++) { 
+for (let index = 0; index < userMessageWords.length; index++) {
     if (userMessageWords[index] === badWord) {
         break;
     }
@@ -54,8 +54,8 @@ for (let index = 0; index < userMessageWords.length; index++) {
 ```js
 let allUsers = ["user1", "user2", "user3"]
 let you = "user1"
-for (let index = 0; index < allUsers.length; index++) { 
-    if (allUsers[index] === you) { 
+for (let index = 0; index < allUsers.length; index++) {
+    if (allUsers[index] === you) {
         continue
     }
     // send message

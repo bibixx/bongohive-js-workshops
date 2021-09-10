@@ -20,11 +20,11 @@ points += 10
 // points: 15
 ```
 
-## Comparision 
+## Comparision
 
 ### How many equal signs? == or ===
 
-`==` Operator can make any necessary type conversions to compare values, which migh result in unexpected results
+`==` Operator can make any necessary type conversions to compare values, which might result in unexpected results
 example
 
 ``` js
@@ -35,7 +35,7 @@ null == undefined // true
 ' \t\r\n ' == 0 // true
 ```
 
-`===` will not make any type conversions, and if the types won't match it will return false, you should prefer the triple sign comparasion whenever possible
+`===` will not make any type conversions, and if the types won't match it will return false, you should prefer the triple sign comparison whenever possible
 
 ``` js
 0 === '' // false
@@ -69,18 +69,7 @@ javascript has it's own approach to compare stuff, let's take a closer look
 js will try to convert to number and than compare numbers
 ``` js
 let hour = "16"
-if (hour < 20) { 
+if (hour < 20) {
     console.log("it's not that late")
 }
 ```
-
-### comparing strings
-
-strings comparation happen by comparing their positions in Unicode char table
-``` js
-console.log("ab" > "aa")
-// true
-console.log("age" > "Age")
-// true
-```
-> small latters are defined after big once in Unicode table that's why age is greater than Age

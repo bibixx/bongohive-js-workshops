@@ -6,7 +6,7 @@
 
 let age = 19
 
-if (age >= 18) { 
+if (age >= 18) {
     console.log("Adult content enabled")
 }
 
@@ -16,9 +16,9 @@ if (age >= 18) {
 
 let isPremium = true
 
-if (isPremium) { 
+if (isPremium) {
     console.log("Access granted")
-} else { 
+} else {
     console.log("Not today")
 }
 
@@ -28,11 +28,11 @@ if (isPremium) {
 
 let difficultyLevel = 100
 
-if (difficultyLevel < 50) { 
+if (difficultyLevel < 50) {
     console.log("Beginner lesson")
-} else if (difficultyLevel < 90) { 
+} else if (difficultyLevel < 90) {
     console.log("Medium lesson")
-} else { 
+} else {
     console.log("Advanced lesson")
 }
 
@@ -43,7 +43,7 @@ if (difficultyLevel < 50) {
 ``` js
 let roadLight = "red"
 
-switch(roadLight) { 
+switch(roadLight) {
     case "greed":
         console.log("drive safely");
         break;
@@ -76,5 +76,4 @@ if (undefined) { ... }
 if (0) { ... }
 if (NaN) { ... }
 if ("") { ... }
-if (document.all) { ... }
 ```
