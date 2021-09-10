@@ -28,6 +28,7 @@ getCircleAreaMessage(3) // 'For radius 3 area is 28.27.'
 ```
 
 ### 3. Check if array is sorted descending (from highest to lowest)
+Think how can you end checking first time the values are not in the expected order
 ```js
 function isArrayDescending(arr) {
   // Your code goes here
