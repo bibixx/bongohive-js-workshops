@@ -28,6 +28,7 @@ getCircleAreaMessage(3) // 'For radius 3 area is 28.27.'
 ```
 
 ### 3. Check if array is sorted descending (from highest to lowest)
+Think how can you end checking first time the values are not in the expected order
 ```js
 function isArrayDescending(arr) {
   // Your code goes here
@@ -75,4 +76,89 @@ getPasswordHashFromUser(correctUser) // '0x4143f2abc'
 
 const incorrectUser = {}
 getPasswordHashFromUser(incorrectUser) // null - no error
+```
+
+### 6. Team health
+Let's say we have a game in which players can group into a team,
+if so we want to calculate their whole health points level
+
+hint: try to use spread to make your life easier
+
+``` js
+const player1 = { 
+  name: 'Andrea',
+  hp: 120
+}
+
+const player2 = { 
+  name: 'Will',
+  hp: 85
+}
+
+const player3 = {
+  name: 'Arthur',
+  hp: 90
+}
+
+function calculateTeamHealth() { 
+
+}
+
+calculateTeamHealth(player1, player2) // 205
+calculateTeamHealth(player1, player3) // 210
+calculateTeamHealth(player2) // 85
+calculateTeamHealth(player1, player2, player3) // 295
+```
+
+### 7. Form validation
+
+We have a registration for an event, but we have got requirements on who can attend them
+1. Participant must be adult (18 years or more)
+2. Participant must have their own device, which is a laptop
+3. Participant must have at least 50 points scored
+
+
+**EXTRA** if the validation fails try to give explicit information what went wrong, so that the caller of your function knows what to present to the user
+
+Example passing form
+```js
+let validForm = { 
+  name: "Carol",
+  age: 22,
+  devices: [
+    {
+      "name": "Amazing tablet",
+      "type": "tablet"
+    },
+    {
+      "name": "Still working laptop",
+      "type": "laptop"
+    }
+  ],
+  score: 50
+}
+```
+
+Example non passing form
+```js
+let invalidForm = { 
+  name: "Emily",
+  age: 18,
+  devices: [
+    {
+      "name": "iPhone X",
+      "type": "phone"
+    },
+  ],
+  score: 100
+}
+```
+
+``` js
+function isFormValid() { 
+
+}
+
+isFormValid(validForm) // true
+isFormValid(invalidForm) // false
 ```
