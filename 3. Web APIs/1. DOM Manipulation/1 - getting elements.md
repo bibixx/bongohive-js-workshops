@@ -22,7 +22,8 @@ Example HTML structure
 </html>
 ```
 
-HTML - head
+HTML
+  - head
      - body
         - header
         - section
@@ -31,7 +32,7 @@ HTML - head
 
 ## Window & Document
 
-When js runs in the browser `window` is it's main root object 
+When js runs in the browser `window` is it's main root object
 
 window contains a property named `document`, it contains the whole webpage
 using document you'll perform DOM manipulation
@@ -71,26 +72,7 @@ const [...userMessages] = document.querySelectorAll('.userMessages');
 userMessages.map(userMessage => userMessage.style.color);
 ```
 
-There's one exception
-
-``` js
-const [...userMessages] = document.querySelectorAll('.userMessages');
-userMessages.forEach( userMessage => {
-    userMessage.style.color = 'grey'
-});
-```
-
-## Ready collections
-
-``` js
-document.body
-
-document.all
-document.forms
-document.images
-document.anchors
-```
-
+@TODO remove this possibly to much detail, and rare use-cases
 ## HTMLCollection vs NodeList
 
 NodeList is returned by `querySelector` and `querySelectorAll`
@@ -98,6 +80,7 @@ HTMLCollection is returned by older methods like `getElementsByTagName`
 
 HTMLCollection will automatically update whenever html "inside them" will change, the NodeList on the other hand won't change no matter what will happen to your DOM
 
+// @TODO possibly remove that as well. Just because sth is possible doesn't mean we have to teach. I prefer teaching elements that ppl use often.
 ## Targeting nested elements
 
 query selectors allow you to use css like selectors to get any element you need, the selector tho doesn't have a context, let's check it out
@@ -124,7 +107,7 @@ const hero = document.querySelector('.hero')
 const insider = hero.querySelector(':scope div div')
 // insider: insider
 ```
-
+// @TODO I would leave just this part
 Instead of playing with scope we can have a better naming
 
 ``` html
