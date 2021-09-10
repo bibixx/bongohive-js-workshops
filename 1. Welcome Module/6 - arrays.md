@@ -167,3 +167,32 @@ freeDays.forEach((day) => { console.log(`I like ${day}!`)})
 ```
 
 First supports things like break and continue, Second can be chained with other iterator methods
+
+## Destructuring
+
+```js
+const nameAndSurname = ['Donald', 'Trump']
+const [name, surname] = nameAndSurname
+
+// name: 'Donald'
+// surname: 'Trump'
+```
+
+## Spread operator
+
+```js
+const registeredUsers = ['John', 'Pablo']
+const newUsers = ['Micheal', 'Clint']
+const currentUser = 'Peter'
+const allUsers = [...registeredUsers, ...newUsers, currentUser]
+
+// allUsers:  ['John', 'Pablo', 'Micheal', 'Clint', 'Peter']
+```
+
+## Rest operator
+
+```js
+const [firstUser, ...rest] = ['user1', 'user2', 'user3']
+// firstUser: 'user1',
+// rest: ['user2', 'user3']
+```
