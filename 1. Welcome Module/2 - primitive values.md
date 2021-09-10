@@ -70,10 +70,10 @@ Each primitive type has it's own corresponding Object type, when you try to acce
 Let's take a look
 
 ``` js
-const welcomeMessasge = "Welcome to JavaScript @ BonhoHive Workshops!"
-welcomeMessasge.length // 44
+const welcomeMessage = "Welcome to JavaScript @ BonhoHive Workshops!"
+welcomeMessage.length // 44
 
-const powerMulitiplier = 2.371823
+const powerMultiplier = 2.371823
 // When we want to present it to user we don't want to show all the numbers after dot, we mostly show just 2
-powerMulitiplier.toFixed(2) // 2.37
+powerMultiplier.toFixed(2) // 2.37
 ```
