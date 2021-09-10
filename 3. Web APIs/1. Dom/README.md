@@ -213,3 +213,58 @@ $wrapper.appendChild($firstNameContainer)
 $wrapper.appendChild($lastNameContainer)
 $wrapper.appendChild($ageContainer)
 ```
+
+### Relationships between nodes
+
+``` html
+<section class="banner">
+  <div class="banner-header">
+    <h3 class="banner-title">Welcome</h3>
+    <h4>To the class</h4>
+  </div>
+  <div>
+    <p class="banner-footer">class is open between 10 am and 6 pm
+  </div>
+</section>
+```
+
+``` js
+const $bannerHeader = document.querySelector('.banner-header');
+
+console.log($bannerHeader.parentElement)
+// <section class="banner">…</section>
+
+console.log($bannerHeader.firstElementChild)
+// <h3 class="banner-title">Welcome</h3>
+
+console.log($bannerHeader.lastElementChild)
+// <h4>To the class</h4>
+
+console.log($bannerHeader.children)
+// [<h3 class="banner-title">, <h4>]
+```
+
+### Alternative to parentElement - closest()
+
+It goes up the DOM tree and finds first result matching the selector
+
+``` html
+<section class="banner">
+  <div class="banner-header">
+    <h3 class="banner-title">Welcome</h3>
+    <h4>To the class</h4>
+  </div>
+  <div>
+    <p class="banner-footer">class is open between 10 am and 6 pm
+  </div>
+</section>
+```
+
+``` js
+const $bannerTitle = document.querySelector('.banner-title');
+
+const $banner = $bannerTitle.closest('.banner')
+// instead of $banner = $bannerTitle.parentElement.parentElement
+
+// output: <section class="banner">…</section>
+```
