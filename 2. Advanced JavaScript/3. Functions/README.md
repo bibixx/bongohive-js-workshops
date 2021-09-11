@@ -275,6 +275,7 @@ myFunction.call('this is my custom this', 3, 4)
 myFunction.apply('this is my custom this', [5, 6])
 // 5
 // 6
+// this is my custom this
 
 const functionWithCustomThis = myFunction
   .bind('this is my custom this')
