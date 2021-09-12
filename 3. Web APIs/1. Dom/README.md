@@ -211,7 +211,25 @@ $ageContainer.textContent = user.age
 const $wrapper = document.querySelector("#wrapper")
 $wrapper.appendChild($firstNameContainer)
 $wrapper.appendChild($lastNameContainer)
-$wrapper.appendChild($ageContainer)
+
+
+// or if we want to insert before a specific element as opposed to adding at the end
+$wrapper.appendChild($ageContainer, $firstNameContainer)
+```
+
+### Removing elements
+
+```html
+  <div class="trash">
+    <span id="first">To be removed</span>
+  </div>
+```
+
+```js
+const $trash = document.querySelector('trash')
+const $trashItem = document.querySelector('#first')
+
+$trash.removeChild($trashItem)
 ```
 
 ### Relationships between nodes

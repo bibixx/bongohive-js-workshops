@@ -10,4 +10,29 @@ names.sort()
 // names: [ 'Anthony', 'Brad', 'Carlos' ]
 ```
 
-@TODO mention custom sort
+Custom sorting
+
+``` js
+const users = [
+    {
+        username: "John",
+        score: 30
+    },
+    {
+        username: "Anna",
+        score: 50
+    }
+]
+
+users.sort((first, second) => { 
+    if (first.score > second.score) { 
+        return -1
+    }
+    if (first.score < second.score) { 
+        return 1
+    }
+    return 0
+})
+
+// users: [ { username: 'Anna', score: 50 }, { username: 'John', score: 30 } ]
+```

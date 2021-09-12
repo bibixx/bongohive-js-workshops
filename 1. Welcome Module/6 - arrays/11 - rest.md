@@ -1,7 +1,16 @@
 ## Rest operator
 
 ```js
-const [firstUser, ...rest] = ['user1', 'user2', 'user3']
-// firstUser: 'user1',
-// rest: ['user2', 'user3']
+function logAll(...arguments) { 
+    for (const argument of arguments) { 
+        console.log(argument)
+    }
+}
+
+logAll('user1', 'user2', 'user3')
+
+// output:
+// user1
+// user2
+// user3
 ```
